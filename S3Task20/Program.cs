@@ -9,14 +9,25 @@ Console.WriteLine("Введите координату X точки 2");
 int x2 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите координату Y точки 2");
 int y2 = Convert.ToInt32(Console.ReadLine());
-// int a = 2;
+
 int c = x1 - x2;
 int d = y1 - y2;
 int f = 2;
 double respow1 = Math.Pow(c, f);
 double respow2 = Math.Pow(d, f);
-int g = respow1;
-int e = respow2;
-int b = g + e;
-double resSqrt = Math.Sqrt(b);
-Console.WriteLine($"{resSqrt:f2}");
+Console.WriteLine($"{respow1}, {respow2}");
+double e = respow1 + respow2;
+Console.WriteLine($"{e}");
+double resqrt = Math.Sqrt(e);
+Console.WriteLine($"{resqrt:f2}");
+// double resSqrt = Math.Sqrt(b);
+// Console.WriteLine($"{resSqrt:f2}");
+
+// int a = 25;
+// int b = 2;
+// double resQrt = Math.Sqrt(a);
+// Console.WriteLine(resQrt);
+// double respPow = Math.Pow(a, b);
+// Console.WriteLine(respPow);
+
+
