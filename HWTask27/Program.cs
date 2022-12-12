@@ -11,10 +11,9 @@ int d = a;
 string str = Convert.ToString(a);
 int lenght = str.Length;
 // Console.WriteLine(lenght);
-int[] array = new int[lenght+2];
-for (int i = 0; i < lenght + 2; i++)
+int[] array = new int[lenght + lenght];
+for (int i = 0; i < lenght + lenght; i++)
 {
-// int c = a - b;
 int b = a % 10;
 if (b == 0)
 {
@@ -25,7 +24,7 @@ else
 a = a - b;
 }
 array[i] = b;
-
+// Console.WriteLine(string.Join(", ", array));
 }
 int sum = 0;
 for (int i = 0; i < array.Length; i++)
