@@ -9,26 +9,21 @@ for (int i = 0; ;i++)
 {
 Console.WriteLine($"Введите число {i + 1}, для прекращения ввода введите stop");
 string str = Console.ReadLine();
-newstr = newstr + str;
+newstr = newstr + "," + str;
 if (str == "stop")
 {
    break;
 }
 
 }
-// Console.WriteLine(newstr);
- int[] myArray = new int[newstr.Length-4];
-for (int j = 0; j < newstr.Length-4; j++)
+newstr = newstr[..^4];
+Console.WriteLine(newstr);
+int number = int.Parse(newstr);
+Console.WriteLine(number);
+int[] myArray = new int[newstr.Length];
+for (int d = 0; d < newstr.Length; d++)
 {
- myArray[j] = newstr[j] -'0';
- }
-// Console.WriteLine($"{string.Join(", ", myArray)}");  
-int count = 0;
-for (int d = 0;d < myArray.Length; d++)
-{
-   if (myArray[d] < 0)
-   {
-      count = count +1;
-   }
+if (newstr[d]== ',')
+myArray[d] = int.Parse(newstr[d-1]);
 }
-Console.WriteLine($"Количество отрицательных элементов введено: {count}");
+Console.WriteLine($"{string.Join(", ", myArray)}");
