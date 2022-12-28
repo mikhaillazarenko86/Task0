@@ -8,35 +8,68 @@ int[,] GetRandomMatrix(int rows, int columns, int leftRange = 1, int rightRange 
     int[,] matr = new int[rows, columns];
 
     var rand = new Random();
+    for (int a = 1; a < 4; a++)
+    {
+        int b = 1;
     for(int j = 0; j < matr.GetLength(1); j++)
     {
         int i = 0;
-        matr[i, j] = rand.Next(leftRange, rightRange + 1);
+        
+        
+        matr[i, j] = b;
+        b++;
+       
     }
+     }
+    for (int a = 1; a < 4; a++)
+    {
+        int b = 5;
     for (int i = 1; i < matr.GetLength(0); i++)
     {
         int j =  matr.GetLength(1)-1;
-        matr[i, j] = rand.Next(leftRange, rightRange + 1);
+        matr[i, j] = b;
+        b++;
     }
+    }
+    for (int a = 1; a < 4; a++)
+    {
+        int b = 8;
     for (int j = matr.GetLength(0)-2 ; j > 0; j--)
     {
         int i =  matr.GetLength(0)-1;
-        matr[i, j] = rand.Next(leftRange, rightRange + 1);
+        matr[i, j] = b;
+        b++;
     }
+    }
+    for (int a = 1; a < 4; a++)
+    {
+        int b = 10;
     for (int i = matr.GetLength(0)-1; i >= 1; i--)
     {
         int j =  0;
-        matr[i, j] = rand.Next(leftRange, rightRange + 1);
+        matr[i, j] = b;
+        b++;
     }
+    }
+     for (int a = 1; a < 4; a++)
+    {
+        int b = 13;
       for (int j = 1; j < matr.GetLength(0)-1; j++)
     {
         int i = 1;
-        matr[i, j] = rand.Next(leftRange, rightRange + 1);
+        matr[i, j] = b;
+        b++;
     }
+    }
+     for (int a = 1; a < 4; a++)
+    {
+        int b = 15;
      for (int j = 2; j >= 1; j--)
     {
         int i = 2;
-        matr[i, j] = rand.Next(leftRange, rightRange + 1);
+        matr[i, j] = b;
+        b++;
+    }
     }
     return matr;
 }
