@@ -17,7 +17,7 @@ int ReadInt(string message)                                                 // Ð
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int[,] GetRandomMatrix(int rows, int columns, int leftRange = 1, int rightRange = 9)
+int[,] GetRandomMatrix(int rows, int columns, int leftRange = -1, int rightRange = 2)
 {
     int[,] matr = new int[rows, columns];
 
