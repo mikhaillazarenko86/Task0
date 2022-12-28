@@ -3,7 +3,7 @@
 // Например, на выходе получается вот такой массив:
 
 
-int[,] GetRandomMatrix(int rows, int columns, int leftRange = 0, int rightRange = 10)
+int[,] GetRandomMatrix(int rows, int columns, int leftRange = 1, int rightRange = 9)
 {
     int[,] matr = new int[rows, columns];
 
@@ -23,14 +23,19 @@ int[,] GetRandomMatrix(int rows, int columns, int leftRange = 0, int rightRange 
         int i =  matr.GetLength(0)-1;
         matr[i, j] = rand.Next(leftRange, rightRange + 1);
     }
-    for (int j = 0 ; j < matr.GetLength(1)-1; j++)
+    for (int i = matr.GetLength(0)-1; i >= 1; i--)
     {
-        int i =  matr.GetLength(0)-2;
+        int j =  0;
         matr[i, j] = rand.Next(leftRange, rightRange + 1);
     }
-      for (int j = matr.GetLength(1)-1 ; j > 0; j--)
+      for (int j = 1; j < matr.GetLength(0)-1; j++)
     {
-        int i =  matr.GetLength(0)-3;
+        int i = 1;
+        matr[i, j] = rand.Next(leftRange, rightRange + 1);
+    }
+     for (int j = 2; j >= 1; j--)
+    {
+        int i = 2;
         matr[i, j] = rand.Next(leftRange, rightRange + 1);
     }
     return matr;
