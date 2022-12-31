@@ -3,12 +3,19 @@
 
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
-int num = 0;
-int Line (int n)
+// Console.WriteLine("Введите число");
+// int num = Convert.ToInt32(Console.ReadLine());
+int minnum = 2;
+int maxnum = 4;
+int Line (int m, int n)
 {
-// if(n == 1) return 5;
-if(n == 7) return 8;
-Console.Write(Line(n+1));
-return n+1;
+if(n < 0) return n;
+
+if(n == m) return n;
+
+
+Console.Write(Line(m+1, n));
+return m;
+
 }
-Console.Write(Line(num));
+Console.Write(Line(minnum,maxnum));
